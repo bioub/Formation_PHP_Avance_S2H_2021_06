@@ -1,16 +1,27 @@
 <?php
 
-require_once __DIR__ . '/../lib/CompteBancaire.php';
+use Openska\Bank\{CompteBancaire,Contact};
 
-$compteCourant = new CompteBancaire();
-$compteCourant->setProprietaire('Jean');
-$compteCourant->setType('Compte Courant');
+require_once __DIR__ . '/../autoload.php';
 
-$compteCourant->crediter(3000);
-$compteCourant->debiter(1200);
+try {
+    $compteCourant = new CompteBancaire();
+    $contact = new Contact();
+    $compteCourant->setProprietaire('Jean');
+    $compteCourant->setType(\Openska\Bank\CompteBancaireType::COMPTE_COURANT);
 
-echo $compteCourant->getSolde() . "\n"; // doit afficher 1800
+    $compteCourant->crediter(3000);
+    // $compteCourant->crediter(-3000); // redirige dans le catch
+    $compteCourant->debiter(1200);
 
+    echo $compteCourant->getSolde() . "\n"; // doit afficher 1800
+}
+catch (Exception $exception) {
+    // gestionnaire d'erreur, ex :
+    // logguer l'erreur
+    // demander une autre saisie
+    echo "Erreur " . $exception->getMessage();
+}
 // Créer la classe CompteBancaire qui correspond à ce fichier
 // de démo
 
