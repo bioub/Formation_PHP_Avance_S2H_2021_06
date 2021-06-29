@@ -15,6 +15,7 @@ require_once __DIR__ . '/../autoload.php';
 // require_once 'lib/Contact.php';
 
 $contact = new Contact();
+$contact->setPrenom('Toto')->setNom('Titi')->setId(2);
 echo $contact->hello() . "\n";
 
 $contactBank = new ContactBank();

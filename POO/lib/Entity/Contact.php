@@ -21,6 +21,9 @@ class Contact
     /** @var string */
     protected $nom;
 
+    /** @var Societe */
+    protected $societe;
+
     /**
      * @return int
      */
@@ -33,7 +36,7 @@ class Contact
      * @param int $id
      * @return Contact
      */
-    public function setId(int $id): Contact
+    public function setId(int $id): self
     {
         $this->id = $id;
         return $this;
@@ -57,7 +60,7 @@ class Contact
      * @param string $prenom
      * @return Contact
      */
-    public function setPrenom(string $prenom): Contact
+    public function setPrenom(string $prenom): self
     {
         $this->prenom = $prenom;
         return $this;
@@ -81,9 +84,29 @@ class Contact
         return $this;
     }
 
+    /**
+     * @return Societe
+     */
+    public function getSociete(): Societe
+    {
+        return $this->societe;
+    }
+
+    /**
+     * @param Societe $societe
+     * @return Contact
+     */
+    public function setSociete(Societe $societe): Contact
+    {
+        $this->societe = $societe;
+        return $this;
+    }
+
+
+
     // "fonction de l'objet : méthode (method)
     public function hello()
     {
-        return 'Hello';
+        return 'Hello my name is ' . $this->prenom;
     }
 }
