@@ -58,7 +58,7 @@ class CompteBancaire
 
     public function setType(string $type): self
     {
-        if (!in_array($type, [CompteBancaireType::COMPTE_COURANT, CompteBancaireType::LIVRET])) {
+        if (!in_array($type, [Types\CompteBancaireType::COMPTE_COURANT, Types\CompteBancaireType::LIVRET])) {
             throw new Exception("Le type $type n'est un type autorisé");
         }
 

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Openska\Bank;
+namespace Openska\Bank\Types;
 
 
 class CompteBancaireType

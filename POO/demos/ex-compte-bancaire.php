@@ -8,7 +8,7 @@ try {
     $compteCourant = new CompteBancaire();
     $contact = new Contact();
     $compteCourant->setProprietaire('Jean');
-    $compteCourant->setType(\Openska\Bank\CompteBancaireType::COMPTE_COURANT);
+    $compteCourant->setType(\Openska\Bank\Types\CompteBancaireType::COMPTE_COURANT);
 
     $compteCourant->crediter(3000);
     // $compteCourant->crediter(-3000); // redirige dans le catch
