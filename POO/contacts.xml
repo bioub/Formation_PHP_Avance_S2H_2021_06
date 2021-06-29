@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<contacts>
+    <contact id="1">
+        <prenom>Steve</prenom>
+        <nom>Jobs</nom>
+    </contact>
+    <contact id="2">
+        <prenom>Bill</prenom>
+        <nom>Gates</nom>
+    </contact>
+</contacts>

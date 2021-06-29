@@ -18,3 +18,6 @@ $reader = new \Openska\Reader\FileReader(__DIR__ . '/../composer.json');
 foreach ($reader->readLines() as $line) {
     echo $line;
 }
+
+
+// echo $reader[10];

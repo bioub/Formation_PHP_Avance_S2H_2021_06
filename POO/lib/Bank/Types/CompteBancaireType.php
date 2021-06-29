@@ -4,7 +4,7 @@
 namespace Openska\Bank\Types;
 
 
-class CompteBancaireType
+abstract class CompteBancaireType
 {
     const COMPTE_COURANT = 'Compte Courant';
     const LIVRET = 'Livret';

@@ -4,7 +4,7 @@
 namespace Openska\Reader;
 
 
-class FileReader
+class FileReader implements \ArrayAccess
 {
     /** @var resource */
     protected $fic;
@@ -30,5 +30,26 @@ class FileReader
     public function __destruct()
     {
         fclose($this->fic);
+    }
+
+
+    public function offsetExists($offset)
+    {
+        return isset($this->readLines()[$offset]);
+    }
+
+    public function offsetGet($offset)
+    {
+        return $this->readLines()[$offset];
+    }
+
+    public function offsetSet($offset, $value)
+    {
+        // TODO: Implement offsetSet() method.
+    }
+
+    public function offsetUnset($offset)
+    {
+        // TODO: Implement offsetUnset() method.
     }
 }
