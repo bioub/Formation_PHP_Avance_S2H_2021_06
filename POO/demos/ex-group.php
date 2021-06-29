@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../vendor/autoload.php';
+
 $contact1 = new \Openska\Entity\Contact();
 $contact1->setId(1)
     ->setPrenom('Toto')
