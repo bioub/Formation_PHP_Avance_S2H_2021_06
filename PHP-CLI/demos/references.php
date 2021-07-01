@@ -1,5 +1,8 @@
 <?php
 
+// Types Scalaires (non-objets) :
+// string, array, boolean, int, float
+
 $s1 = 'Jean';
 $s2 = $s1; // passage par valeur/copie
 // $s2 = &$s1; // passage par référence

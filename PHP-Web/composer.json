@@ -1,0 +1,11 @@
+{
+    "name": "romain/php-web",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Romain Bohdanowicz",
+            "email": "romain.bohdanowicz@gmail.com"
+        }
+    ],
+    "require": {}
+}
