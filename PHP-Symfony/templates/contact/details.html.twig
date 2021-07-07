@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des contacts{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for c in contacts %}
+        <li>
+            <a href="">
+                {{ c.prenom }} {{ c.nom }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
