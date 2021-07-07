@@ -3,13 +3,9 @@
 {% block title %}Liste des contacts{% endblock %}
 
 {% block body %}
-    <ul>
-        {% for c in contacts %}
-        <li>
-            <a href="">
-                {{ c.prenom }} {{ c.nom }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+   <p>{{ contact.prenom }} {{ contact.nom }}</p>
+
+   {% if contact.societe %}
+   <p>Société : {{ contact.societe.nom }}</p>
+   {% endif %}
 {% endblock %}
