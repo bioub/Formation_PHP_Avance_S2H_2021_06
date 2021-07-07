@@ -10,7 +10,7 @@ $dsn = "mysql:host=$DB_HOST;dbname=$DB_NAME;charset=UTF8";
 $pdo = new PDO($dsn, $DB_USER, $DB_PASS);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$stmt = $pdo->query('SELECT id, prenom, nom FROM contact');
+$stmt = $pdo->query('SELECT id, prenom, nom FROM contact LIMIT 100');
 $stmt->setFetchMode(PDO::FETCH_CLASS, \Openska\Entity\Contact::class);
 
 /** @var \Openska\Entity\Contact[] $contacts */
